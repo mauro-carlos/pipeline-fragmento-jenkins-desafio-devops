@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Configurando imagem'
+                git url: 'https://github.com/torneseumprogramador/pipeline-fragmento-jenkins-desafio-devops.git', branch: 'main'
+                sh './contruindo_ambiente/deploy.sh'
             }
         }
         stage('TEST') {
@@ -15,6 +16,11 @@ pipeline {
         stage('Criando AMI customizada') {
             steps {
                 echo 'Gerando AMI'
+            }
+        }
+        stage('Destruir ambiente') {
+            steps {
+                echo 'destruindo'
             }
         }
     }
