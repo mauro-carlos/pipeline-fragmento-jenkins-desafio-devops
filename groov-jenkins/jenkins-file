@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Configurando imagem'
+            }
+        }
+        stage('TEST') {
+            steps {
+                echo 'Fazendo teste da imagem'
+            }
+        }
+        stage('Criando AMI customizada') {
+            steps {
+                echo 'Gerando AMI'
+            }
+        }
+    }
+}
