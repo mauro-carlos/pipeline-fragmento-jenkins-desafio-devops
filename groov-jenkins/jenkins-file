@@ -11,6 +11,7 @@ pipeline {
         stage('TEST') {
             steps {
                 echo 'Fazendo teste da imagem'
+                sh 'cd /var/lib/jenkins/workspace/pipeline-infra-fragmento/teste && ./verifica_ambiente.sh'
             }
         }
         stage('Criando AMI customizada') {
