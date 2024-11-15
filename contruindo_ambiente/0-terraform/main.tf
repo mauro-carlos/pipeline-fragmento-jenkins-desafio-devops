@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "vm_fragmento" {
   ami           = "ami-09e67e426f25ce0d7"
   instance_type = "t2.micro"
-  key_name      = "chave-publica-computador-reserva"
+  key_name      = "chave_ssh_desafio_pub" # Nome da chave deve estar correto
   tags = {
     Name = "vm-fragmento"
   }
