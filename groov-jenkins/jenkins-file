@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git url: 'https://github.com/torneseumprogramador/pipeline-fragmento-jenkins-desafio-devops.git', branch: 'main'
+                git url: 'https://github.com/mauro-carlos/pipeline-fragmento-jenkins-desafio-devops.git', branch: 'main'
                 sh 'cd /var/lib/jenkins/workspace/pipeline-infra-fragmento/contruindo_ambiente && ./deploy.sh'
             }
         }
